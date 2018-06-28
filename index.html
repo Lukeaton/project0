@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<!-- //This creates 9x9 boxes and gives them an individual id.
+///////////////////////////////////////////////////////// -->
+	<table>
+		<tr>
+			<td class="cell" id="0"></td>
+			<td class="cell" id="1"></td>
+			<td class="cell" id="2"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="3"></td>
+			<td class="cell" id="4"></td>
+			<td class="cell" id="5"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="6"></td>
+			<td class="cell" id="7"></td>
+			<td class="cell" id="8"></td>
+		</tr>
+	</table>
+<!-- //Endgame div to cover board when game over.
+//////////////////////////////////////////// -->
+	<div class="endgame">
+		<div class="text"></div>
+	</div>
+<!-- //Button to reset the game state and start again.
+///////////////////////////////////////////////// -->
+	<button onClick="startGame()">Replay</button>
+
+  <script src="js/script.js"></script>
+</body>
