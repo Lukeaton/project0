@@ -13,7 +13,7 @@ const winCombos = [
 	[0, 4, 8],
 	[6, 4, 2]
 ]
-// This stores a reference to all of the class=cells.
+// This stores a reference of the array to all of the class=cells.
 ///////////////////////////////////////////////
 const cells = document.querySelectorAll('.cell');
 startGame();
@@ -92,12 +92,13 @@ function gameOver(gameWon) {
 ///////////////////////////////////////////////////////////////////
 function emptySquares() {
 	return origBoard.filter(s => typeof s == 'number');
+	setTimeout(turn, 1000);
 }
 //Function to tell where computer will play by finding the first empty square.
 //Really dumb AI.
 //////////////////////////////////////////////////////////////////////////////
 function bestSpot() {
-	return emptySquares()[0];
+		return emptySquares()[0];
 }
 //Sees if every square is filled up but no-one has won. Runs tie function.
 //////////////////////////////////////////////////////////////////////////

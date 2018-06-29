@@ -33,8 +33,19 @@ function turnClick(square) {
 }
 
 function turn(squareId, player) {
+	// setTimeout(turn, 1000);
 	origBoard[squareId] = player;
-	document.getElementById(squareId).innerText = player;
+
+	if ( player === "X") {
+		setTimeout( function() {
+			document.getElementById(squareId).innerText = player;
+		}, 1000)
+	} else {
+		document.getElementById(squareId).innerText = player;
+	}
+
+
+
 	let gameWon = checkWin(origBoard, player)
 	if (gameWon) gameOver(gameWon)
 }
