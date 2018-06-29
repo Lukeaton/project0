@@ -56,8 +56,7 @@ function turn(squareId, player) {
 function checkWin(board, player) {
 	//Creates an index of positions on the board that have already been played.
 	//merges the array.
-	let plays = board.reduce((a, e, i) =>
-		(e === player) ? a.concat(i) : a, []);
+	let plays = board.reduce((a, e, i) => (e === player) ? a.concat(i) : a, []);
 	let gameWon = null;
 	//Loops through every winning combo and creates index.
 	for (let [index, win] of winCombos.entries()) {
@@ -84,7 +83,7 @@ function gameOver(gameWon) {
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].removeEventListener('click', turnClick, false);
 	}
-	//Declares winner or loser and shows the text.
+	//Declares winner or loser and shows the text
 	declareWinner(gameWon.player == huPlayer ? "Winner Winner Chicken Dinner!" : "Game Over Loser. Try Again!");
 }
 
